@@ -17,6 +17,9 @@
     "forceConsistentCasingInFileNames": true,
     "baseUrl": ".",
     "paths": {
+      "#modules/*": ["./src/modules/*"],
+      "#config/*": ["./src/config/*"],
+      "#schemas/*": ["./src/schemas/*"],
       "~/*": ["./src/*"]
     }
   },

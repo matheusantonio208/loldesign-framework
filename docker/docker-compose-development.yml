@@ -1,0 +1,21 @@
+version: "3.6"
+
+x-app: &x-app
+  build:
+    dockerfile: docker/development/Dockerfile
+    context: .
+  environment:
+    - SSH_AUTH_SOCK=/ssh-agent
+  volumes:
+    - $PWD:/banking-web-enterprise
+    - ./.git/:/banking-web-enterprise/.git
+    - ${SSH_AUTH_SOCK}:/ssh-agent
+  working_dir: /banking-web-enterprise
+
+services:
+  app:
+    <<: *x-app
+    ports:
+      - 3000:3000
+    expose:
+      - 3000

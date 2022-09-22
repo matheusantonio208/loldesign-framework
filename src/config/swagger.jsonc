@@ -1,0 +1,39 @@
+{
+  "openapi": "3.0.0",
+  "info": {
+    "title": " Documentation",
+    "description": "This is an API ",
+    "version": "1.0.0",
+    "termOfService": "http://localhost:8080/terms"
+  },
+
+  "servers": [
+    {
+      "url": "http://localhost:3000/v1",
+      "description": "Api de teste"
+    },
+    {
+      "url": "http://localhost:3000/v2",
+      "description": "Api de produção"
+    }
+  ],
+
+  "paths": {
+    //! paths-start
+    //! paths-end
+  },
+  "components": {
+    "schemas": {
+      //! schemas-start
+
+      //! schemas-end
+      "securitySchemes": {
+        "bearerAuth": {
+          "type": "http",
+          "scheme": "bearer",
+          "bearerFormat": "JWT"
+        }
+      }
+    }
+  }
+}
